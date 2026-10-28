@@ -1,0 +1,1 @@
+/usr/bin/clang++ CMakeFiles/QtClangHello.dir/QtClangHello_autogen/mocs_compilation.cpp.o "CMakeFiles/QtClangHello.dir/rpi-ds-gui.cpp.o" -o QtClangHello  /usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6.4.2 /usr/lib/x86_64-linux-gnu/libQt6Gui.so.6.4.2 /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.4.2 /usr/lib/x86_64-linux-gnu/libGLX.so /usr/lib/x86_64-linux-gnu/libOpenGL.so 

@@ -1,0 +1,5 @@
+# Hashes of file build rules.
+fd826abade1cdf9bdee8d8573298e233 CMakeFiles/rpi-ds-gui_autogen
+fd826abade1cdf9bdee8d8573298e233 CMakeFiles/rpi-ds-gui_autogen_timestamp_deps
+8d9b616e9965ef880d52bd34fe01ffe2 QtClangHello_autogen/timestamp
+ffb737ff996180a15d6ac40b798e6555 rpi-ds-gui_autogen/timestamp
