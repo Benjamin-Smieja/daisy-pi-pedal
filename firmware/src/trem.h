@@ -1,9 +1,9 @@
+#pragma once
 #include "Effects/tremolo.h"
-#include "daisysp.h"
-#include "effect_param.h"
-
 #include "effect.h"
-class Trem : Effect{
+
+class Trem : public Effect {
+public:
     enum params{
         kFreq = 0,
         kDepth,
@@ -11,10 +11,16 @@ class Trem : Effect{
         kNumParams
     };
 
-    public:
-        void Init(float sample_rate) override;
-        void UpdateParams() override;
-    private:
-        daisysp::Tremolo trem_;
-        EffectParam params_[Trem::kNumParams]; 
+    void Init(float sample_rate) override;
+    void UpdateParams() override;
+    void ProcessBlock(daisy::AudioHandle::InputBuffer in,
+                                    daisy::AudioHandle::OutputBuffer out,
+                                    size_t                    size) override;
+    
+     
+        
+private:
+    daisysp::Tremolo trem_;
+    const static EffectParamDescriptor kParams_[kNumParams]; 
+    float param_vals_[kNumParams];
 };

@@ -1,8 +1,9 @@
-#include "Effects/tremolo.h"
 #include "daisy_seed.h"
 #include "daisysp.h"
 #include "daisy_core.h"
+#include "messages.h"
 #include "stm32h7xx_hal_gpio.h"
+#include "stm32h7xx_hal_i2c.h"
 #include "trem.h"
 
 using namespace daisy;
@@ -11,10 +12,12 @@ using namespace daisysp;
 DaisySeed         hw;
 I2C_HandleTypeDef hi2c1;
 
-#define I2C_SLAVE_ADDRESS 0x40
-
-uint8_t          rx_data_buffer[8];
+#define I2C_TARGET_ADDRESS 0x40
+constexpr uint8_t kMaxRxBytes = 32;
+uint8_t          rx_data_buffer[kMaxRxBytes];
 volatile bool    is_new_data_ready = false;
+
+MessageRingBuffer ringBuffer; 
 volatile uint8_t pi_effect= 0;
 
 //Effects Chain initialization:
@@ -22,7 +25,6 @@ Trem tremolo;
 
 
 Chorus  ch;
-
 //Chorus Params
 bool  chorusEffectOn;
 float chorusWet;
@@ -45,7 +47,7 @@ void InitI2CTarget()
 
     hi2c1.Instance             = I2C1;
     hi2c1.Init.Timing          = 0x10707DBC;
-    hi2c1.Init.OwnAddress1     = (I2C_SLAVE_ADDRESS << 1);
+    hi2c1.Init.OwnAddress1     = (I2C_TARGET_ADDRESS << 1);
     hi2c1.Init.AddressingMode  = I2C_ADDRESSINGMODE_7BIT;
     hi2c1.Init.DualAddressMode = I2C_DUALADDRESS_DISABLE;
     hi2c1.Init.OwnAddress2     = 0;
@@ -73,15 +75,20 @@ extern "C" void HAL_I2C_AddrCallback(I2C_HandleTypeDef *hi2c,
         if(TransferDirection == I2C_DIRECTION_TRANSMIT)
         {
             HAL_I2C_Slave_Seq_Receive_IT(
-                hi2c, rx_data_buffer, 3, I2C_LAST_FRAME);
+                hi2c, rx_data_buffer, kMaxRxBytes, I2C_LAST_FRAME);
         }
     }
 }
 
+// Handle receive callback, parsing message type and updating buffers according
 extern "C" void HAL_I2C_SlaveRxCpltCallback(I2C_HandleTypeDef *hi2c)
 {
     if(hi2c->Instance == I2C1)
     {
+        //Check & Queue...
+        ringBuffer.push(rx_data_buffer,kMaxRxBytes);
+        
+        //Read in type... 
         pi_effect         = rx_data_buffer[0];
         is_new_data_ready = true;
 
@@ -101,6 +108,13 @@ extern "C" void HAL_I2C_ErrorCallback(I2C_HandleTypeDef *hi2c)
 {
     if(hi2c->Instance == I2C1)
     {
+        if(hi2c->ErrorCode == HAL_I2C_ERROR_AF){
+            uint8_t len = hi2c->pBuffPtr - rx_data_buffer;
+            //Check & Queue
+            ringBuffer.push(rx_data_buffer, len);
+        }else{
+            //drop the data
+        }
         HAL_I2C_EnableListen_IT(hi2c);
     }
 }
@@ -129,25 +143,7 @@ static void AudioCallback(AudioHandle::InputBuffer  in,
                           AudioHandle::OutputBuffer out,
                           size_t                    size)
 {
-    // No physical controls attached yet; processing audio block directly
-    for(size_t i = 0; i < size; i++)
-    {
-        out[0][i] = tremEffectOn ? treml.Process(in[0][i]) : in[0][i];
-
-
-        tremolo.ProcessBlock();
-        ch.Process(in[0][i]);
-        if(chorusEffectOn)
-        {
-            out[0][i]
-                = ch.GetLeft() * chorusWet + out[0][i] * (1.f - chorusWet);
-            out[0][i] *= 1.4f;
-
-        }
-
-        //Mono Bass => Silence the R channel
-        out[1][i] = 0.f;
-    }
+    tremolo.ProcessBlock(in,out,size);
 }
 
 int main(void)
@@ -160,8 +156,7 @@ int main(void)
 
     tremolo.Init(sample_rate);
 
-    initTrem(sample_rate);
-    initChorus(sample_rate);
+    // initChorus(sample_rate);
 
     //Configure and initialize button
     // GPIO button1;
@@ -171,20 +166,23 @@ int main(void)
     hw.StartAudio(AudioCallback);
     while(1)
     {
+        //Handle Coms with RPi (Process Message Queue):
+
+        
 
         if(is_new_data_ready){
             if(pi_effect < 33){
-                hw.SetLed(true);
-                chorusEffectOn = true;
-                tremEffectOn   = false;
+                // hw.SetLed(true);
+                // chorusEffectOn = true;
+                // tremEffectOn   = false;
             }else if (pi_effect < 66){
-                hw.SetLed(false);
-                chorusEffectOn = false;
-                tremEffectOn   = true;
+                // hw.SetLed(false);
+                // chorusEffectOn = false;
+                // tremEffectOn   = true;
             }else{
-                hw.SetLed(true);
-                chorusEffectOn = false;
-                tremEffectOn   = false;
+                // hw.SetLed(true);
+                // chorusEffectOn = false;
+                // tremEffectOn   = false;
             }
 
             is_new_data_ready = false;

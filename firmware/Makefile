@@ -1,11 +1,17 @@
 # Project Name
 TARGET = daisy-pi-pedal-firmware
 
-# Sources
-CPP_SOURCES = bypass.cpp \
-              effect.cpp \
-              effect_param.cpp \
-              trem.cpp
+SRC_DIR = src
+
+# List just the clean filenames
+FILES = main.cpp \
+        effect.cpp \
+        trem.cpp
+
+# Make automatically combines them into: src/main.cpp
+CPP_SOURCES = $(addprefix $(SRC_DIR)/, $(FILES))
+
+C_INCLUDES = -I../protocol
 
 # Library Locations
 DAISYSP_DIR ?= lib/DaisySP
