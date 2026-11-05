@@ -4,6 +4,7 @@
 
 #include <atomic>
 #include <cstddef>
+#include <cstring>
 constexpr uint8_t kNameLen = 16;
 
 enum class MsgType : uint8_t{
