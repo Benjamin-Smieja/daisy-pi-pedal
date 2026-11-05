@@ -1,6 +1,7 @@
 #pragma once
 #include "Effects/tremolo.h"
 #include "effect.h"
+#include <cstdint>
 
 class Trem : public Effect {
 public:
@@ -12,7 +13,7 @@ public:
     };
 
     void Init(float sample_rate) override;
-    void UpdateParams() override;
+    void SetParam(uint8_t param_id, float val) override;
     void ProcessBlock(daisy::AudioHandle::InputBuffer in,
                                     daisy::AudioHandle::OutputBuffer out,
                                     size_t                    size) override;

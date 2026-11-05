@@ -2,6 +2,8 @@
 #include "daisy_seed.h"
 #include "messages.h"
 #include <cmath>
+#include <cstdint>
+#include <sys/types.h>
 
 
 struct EffectParamDescriptor{
@@ -26,7 +28,7 @@ struct EffectParamDescriptor{
         return f;
     }
 
-    float setClampedVal(float f, float &toSet){
+    void setClampedVal(float f, float &toSet){
         switch (param_type) {
             case EffectParamType::Float:
                 toSet = clamp(f);
@@ -41,7 +43,8 @@ struct EffectParamDescriptor{
                 toSet = clamp(f) +0.001;
             break;
             default:
-            //Problem
+            // Todo: Flag issue where type was not set properly...
+                toSet = f;
             break;
         }
     }
@@ -56,7 +59,7 @@ class Effect{
                                     daisy::AudioHandle::OutputBuffer out,
                                     size_t                    size) = 0;
         virtual void Init(float sample_rate) = 0;
-        virtual void UpdateParams() = 0;
+        virtual void SetParam(uint8_t param_is, float val) = 0;
         
         const int GetEffectId(){
             return effect_id_;

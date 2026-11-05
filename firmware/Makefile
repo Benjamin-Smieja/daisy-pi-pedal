@@ -6,7 +6,8 @@ SRC_DIR = src
 # List just the clean filenames
 FILES = main.cpp \
         effect.cpp \
-        trem.cpp
+        trem.cpp \
+        rpiComsManager.cpp
 
 # Make automatically combines them into: src/main.cpp
 CPP_SOURCES = $(addprefix $(SRC_DIR)/, $(FILES))

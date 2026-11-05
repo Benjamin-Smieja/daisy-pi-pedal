@@ -1,5 +1,6 @@
 #include "trem.h"
 #include "messages.h"
+#include <cstdint>
 
 const EffectParamDescriptor Trem::kParams_[kNumParams]{
     {"Freq", EffectParamType::Float, 0.1f, 300.f, 6.0f},
@@ -13,14 +14,25 @@ void Trem::Init(float sample_rate) {
   is_on_ = true; // Enabled by default
   for(int paramNum = 0; paramNum < kNumParams; paramNum++){
     param_vals_[paramNum] = kParams_[paramNum].def;
+    SetParam(paramNum,kParams_[paramNum].def);
   }
-  UpdateParams();
 }
 
-void Trem::UpdateParams() {
-  trem_.SetFreq(param_vals_[Trem::kFreq]);
-  trem_.SetDepth(param_vals_[Trem::kDepth]);
-  trem_.SetWaveform(static_cast<int>(param_vals_[Trem::kWaveForm]));
+void Trem::SetParam(uint8_t param_id, float val) {
+  switch (param_id) {
+    case Trem::kFreq:
+      trem_.SetFreq(param_vals_[Trem::kFreq]);
+      break;
+    case Trem::kDepth:
+      trem_.SetDepth(param_vals_[Trem::kDepth]);
+      break;
+    case Trem::kWaveForm:
+      trem_.SetWaveform(static_cast<int>(param_vals_[Trem::kWaveForm]));
+      break;
+    default:
+    //Did not match one of the Param_Ids....
+    break;
+  }
 }
 
 void Trem::ProcessBlock(daisy::AudioHandle::InputBuffer in,
