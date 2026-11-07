@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/bensmieja/D/side-projects/daisy-seed/rpi-daisy-seed
+CMAKE_SOURCE_DIR = /home/bensmieja/D/side-projects/daisy-pi-pedal/rpi-controller
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/bensmieja/D/side-projects/daisy-seed/rpi-daisy-seed/build
+CMAKE_BINARY_DIR = /home/bensmieja/D/side-projects/daisy-pi-pedal/rpi-controller/build
 
 # Utility rule file for rpi-ds-gui_autogen.
 
@@ -71,9 +71,9 @@ CMakeFiles/rpi-ds-gui_autogen: rpi-ds-gui_autogen/timestamp
 rpi-ds-gui_autogen/timestamp: /usr/lib/qt6/libexec/moc
 rpi-ds-gui_autogen/timestamp: /usr/lib/qt6/libexec/uic
 rpi-ds-gui_autogen/timestamp: CMakeFiles/rpi-ds-gui_autogen.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/bensmieja/D/side-projects/daisy-seed/rpi-daisy-seed/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target rpi-ds-gui"
-	/usr/bin/cmake -E cmake_autogen /home/bensmieja/D/side-projects/daisy-seed/rpi-daisy-seed/build/CMakeFiles/rpi-ds-gui_autogen.dir/AutogenInfo.json ""
-	/usr/bin/cmake -E touch /home/bensmieja/D/side-projects/daisy-seed/rpi-daisy-seed/build/rpi-ds-gui_autogen/timestamp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/bensmieja/D/side-projects/daisy-pi-pedal/rpi-controller/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target rpi-ds-gui"
+	/usr/bin/cmake -E cmake_autogen /home/bensmieja/D/side-projects/daisy-pi-pedal/rpi-controller/build/CMakeFiles/rpi-ds-gui_autogen.dir/AutogenInfo.json ""
+	/usr/bin/cmake -E touch /home/bensmieja/D/side-projects/daisy-pi-pedal/rpi-controller/build/rpi-ds-gui_autogen/timestamp
 
 rpi-ds-gui_autogen: CMakeFiles/rpi-ds-gui_autogen
 rpi-ds-gui_autogen: rpi-ds-gui_autogen/timestamp
@@ -89,6 +89,6 @@ CMakeFiles/rpi-ds-gui_autogen.dir/clean:
 .PHONY : CMakeFiles/rpi-ds-gui_autogen.dir/clean
 
 CMakeFiles/rpi-ds-gui_autogen.dir/depend:
-	cd /home/bensmieja/D/side-projects/daisy-seed/rpi-daisy-seed/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bensmieja/D/side-projects/daisy-seed/rpi-daisy-seed /home/bensmieja/D/side-projects/daisy-seed/rpi-daisy-seed /home/bensmieja/D/side-projects/daisy-seed/rpi-daisy-seed/build /home/bensmieja/D/side-projects/daisy-seed/rpi-daisy-seed/build /home/bensmieja/D/side-projects/daisy-seed/rpi-daisy-seed/build/CMakeFiles/rpi-ds-gui_autogen.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/bensmieja/D/side-projects/daisy-pi-pedal/rpi-controller/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bensmieja/D/side-projects/daisy-pi-pedal/rpi-controller /home/bensmieja/D/side-projects/daisy-pi-pedal/rpi-controller /home/bensmieja/D/side-projects/daisy-pi-pedal/rpi-controller/build /home/bensmieja/D/side-projects/daisy-pi-pedal/rpi-controller/build /home/bensmieja/D/side-projects/daisy-pi-pedal/rpi-controller/build/CMakeFiles/rpi-ds-gui_autogen.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/rpi-ds-gui_autogen.dir/depend
 

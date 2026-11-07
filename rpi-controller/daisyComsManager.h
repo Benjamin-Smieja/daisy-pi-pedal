@@ -2,6 +2,7 @@
 
 #include <cstdint>
 #include <string>
+#include "messages.h"
 
 class daisyComsManager {
 public:
@@ -13,18 +14,15 @@ public:
     daisyComsManager& operator=(const daisyComsManager&) =delete;
 
     bool initialize();
-    bool sendValueToDaisy(uint8_t effect_id, uint8_t param_id, uint8_t value);
+    bool sendSetParamToDaisy(uint8_t effect_id, uint8_t param_id, float value);
+    bool sendDataToDaisy(void* bf, uint8_t num_bytes);
+    GenericMsg readValueFromDaisy();
+    void getPedalDescription();
+    bool requestEffectDescription();
 
 private:
-    int m_adapterNr;
-    int m_deviceAddress;
-    int m_i2cFile;
-    bool m_isConnected;
-
-    // Packed struct matching your future protocol
-    struct __attribute__((packed)) PedalCommand {
-        uint8_t normalized_val;
-        uint8_t effect_id;
-        uint8_t param_id;
-    };
+    int adapterNr_;
+    int deviceAddress_;
+    int i2cFile_;
+    bool isConnected_;
 };

@@ -1,2 +1,4 @@
 build/
 *.pdf
+rpi-contoller/build/
+firmware/build/

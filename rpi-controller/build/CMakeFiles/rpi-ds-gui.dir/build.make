@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/bensmieja/D/side-projects/daisy-seed/rpi-daisy-seed
+CMAKE_SOURCE_DIR = /home/bensmieja/D/side-projects/daisy-pi-pedal/rpi-controller
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/bensmieja/D/side-projects/daisy-seed/rpi-daisy-seed/build
+CMAKE_BINARY_DIR = /home/bensmieja/D/side-projects/daisy-pi-pedal/rpi-controller/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/rpi-ds-gui.dir/depend.make
@@ -72,51 +72,51 @@ include CMakeFiles/rpi-ds-gui.dir/flags.make
 rpi-ds-gui_autogen/timestamp: /usr/lib/qt6/libexec/moc
 rpi-ds-gui_autogen/timestamp: /usr/lib/qt6/libexec/uic
 rpi-ds-gui_autogen/timestamp: CMakeFiles/rpi-ds-gui.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/bensmieja/D/side-projects/daisy-seed/rpi-daisy-seed/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target rpi-ds-gui"
-	/usr/bin/cmake -E cmake_autogen /home/bensmieja/D/side-projects/daisy-seed/rpi-daisy-seed/build/CMakeFiles/rpi-ds-gui_autogen.dir/AutogenInfo.json ""
-	/usr/bin/cmake -E touch /home/bensmieja/D/side-projects/daisy-seed/rpi-daisy-seed/build/rpi-ds-gui_autogen/timestamp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/bensmieja/D/side-projects/daisy-pi-pedal/rpi-controller/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target rpi-ds-gui"
+	/usr/bin/cmake -E cmake_autogen /home/bensmieja/D/side-projects/daisy-pi-pedal/rpi-controller/build/CMakeFiles/rpi-ds-gui_autogen.dir/AutogenInfo.json ""
+	/usr/bin/cmake -E touch /home/bensmieja/D/side-projects/daisy-pi-pedal/rpi-controller/build/rpi-ds-gui_autogen/timestamp
 
 CMakeFiles/rpi-ds-gui.dir/rpi-ds-gui_autogen/mocs_compilation.cpp.o: CMakeFiles/rpi-ds-gui.dir/flags.make
 CMakeFiles/rpi-ds-gui.dir/rpi-ds-gui_autogen/mocs_compilation.cpp.o: rpi-ds-gui_autogen/mocs_compilation.cpp
 CMakeFiles/rpi-ds-gui.dir/rpi-ds-gui_autogen/mocs_compilation.cpp.o: CMakeFiles/rpi-ds-gui.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/bensmieja/D/side-projects/daisy-seed/rpi-daisy-seed/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/rpi-ds-gui.dir/rpi-ds-gui_autogen/mocs_compilation.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/rpi-ds-gui.dir/rpi-ds-gui_autogen/mocs_compilation.cpp.o -MF CMakeFiles/rpi-ds-gui.dir/rpi-ds-gui_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/rpi-ds-gui.dir/rpi-ds-gui_autogen/mocs_compilation.cpp.o -c /home/bensmieja/D/side-projects/daisy-seed/rpi-daisy-seed/build/rpi-ds-gui_autogen/mocs_compilation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/bensmieja/D/side-projects/daisy-pi-pedal/rpi-controller/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/rpi-ds-gui.dir/rpi-ds-gui_autogen/mocs_compilation.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/rpi-ds-gui.dir/rpi-ds-gui_autogen/mocs_compilation.cpp.o -MF CMakeFiles/rpi-ds-gui.dir/rpi-ds-gui_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/rpi-ds-gui.dir/rpi-ds-gui_autogen/mocs_compilation.cpp.o -c /home/bensmieja/D/side-projects/daisy-pi-pedal/rpi-controller/build/rpi-ds-gui_autogen/mocs_compilation.cpp
 
 CMakeFiles/rpi-ds-gui.dir/rpi-ds-gui_autogen/mocs_compilation.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/rpi-ds-gui.dir/rpi-ds-gui_autogen/mocs_compilation.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bensmieja/D/side-projects/daisy-seed/rpi-daisy-seed/build/rpi-ds-gui_autogen/mocs_compilation.cpp > CMakeFiles/rpi-ds-gui.dir/rpi-ds-gui_autogen/mocs_compilation.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bensmieja/D/side-projects/daisy-pi-pedal/rpi-controller/build/rpi-ds-gui_autogen/mocs_compilation.cpp > CMakeFiles/rpi-ds-gui.dir/rpi-ds-gui_autogen/mocs_compilation.cpp.i
 
 CMakeFiles/rpi-ds-gui.dir/rpi-ds-gui_autogen/mocs_compilation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/rpi-ds-gui.dir/rpi-ds-gui_autogen/mocs_compilation.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bensmieja/D/side-projects/daisy-seed/rpi-daisy-seed/build/rpi-ds-gui_autogen/mocs_compilation.cpp -o CMakeFiles/rpi-ds-gui.dir/rpi-ds-gui_autogen/mocs_compilation.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bensmieja/D/side-projects/daisy-pi-pedal/rpi-controller/build/rpi-ds-gui_autogen/mocs_compilation.cpp -o CMakeFiles/rpi-ds-gui.dir/rpi-ds-gui_autogen/mocs_compilation.cpp.s
 
 CMakeFiles/rpi-ds-gui.dir/rpi-ds-gui.cpp.o: CMakeFiles/rpi-ds-gui.dir/flags.make
-CMakeFiles/rpi-ds-gui.dir/rpi-ds-gui.cpp.o: /home/bensmieja/D/side-projects/daisy-seed/rpi-daisy-seed/rpi-ds-gui.cpp
+CMakeFiles/rpi-ds-gui.dir/rpi-ds-gui.cpp.o: /home/bensmieja/D/side-projects/daisy-pi-pedal/rpi-controller/rpi-ds-gui.cpp
 CMakeFiles/rpi-ds-gui.dir/rpi-ds-gui.cpp.o: CMakeFiles/rpi-ds-gui.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/bensmieja/D/side-projects/daisy-seed/rpi-daisy-seed/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/rpi-ds-gui.dir/rpi-ds-gui.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/rpi-ds-gui.dir/rpi-ds-gui.cpp.o -MF CMakeFiles/rpi-ds-gui.dir/rpi-ds-gui.cpp.o.d -o CMakeFiles/rpi-ds-gui.dir/rpi-ds-gui.cpp.o -c /home/bensmieja/D/side-projects/daisy-seed/rpi-daisy-seed/rpi-ds-gui.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/bensmieja/D/side-projects/daisy-pi-pedal/rpi-controller/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/rpi-ds-gui.dir/rpi-ds-gui.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/rpi-ds-gui.dir/rpi-ds-gui.cpp.o -MF CMakeFiles/rpi-ds-gui.dir/rpi-ds-gui.cpp.o.d -o CMakeFiles/rpi-ds-gui.dir/rpi-ds-gui.cpp.o -c /home/bensmieja/D/side-projects/daisy-pi-pedal/rpi-controller/rpi-ds-gui.cpp
 
 CMakeFiles/rpi-ds-gui.dir/rpi-ds-gui.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/rpi-ds-gui.dir/rpi-ds-gui.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bensmieja/D/side-projects/daisy-seed/rpi-daisy-seed/rpi-ds-gui.cpp > CMakeFiles/rpi-ds-gui.dir/rpi-ds-gui.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bensmieja/D/side-projects/daisy-pi-pedal/rpi-controller/rpi-ds-gui.cpp > CMakeFiles/rpi-ds-gui.dir/rpi-ds-gui.cpp.i
 
 CMakeFiles/rpi-ds-gui.dir/rpi-ds-gui.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/rpi-ds-gui.dir/rpi-ds-gui.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bensmieja/D/side-projects/daisy-seed/rpi-daisy-seed/rpi-ds-gui.cpp -o CMakeFiles/rpi-ds-gui.dir/rpi-ds-gui.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bensmieja/D/side-projects/daisy-pi-pedal/rpi-controller/rpi-ds-gui.cpp -o CMakeFiles/rpi-ds-gui.dir/rpi-ds-gui.cpp.s
 
 CMakeFiles/rpi-ds-gui.dir/daisyComsManager.cpp.o: CMakeFiles/rpi-ds-gui.dir/flags.make
-CMakeFiles/rpi-ds-gui.dir/daisyComsManager.cpp.o: /home/bensmieja/D/side-projects/daisy-seed/rpi-daisy-seed/daisyComsManager.cpp
+CMakeFiles/rpi-ds-gui.dir/daisyComsManager.cpp.o: /home/bensmieja/D/side-projects/daisy-pi-pedal/rpi-controller/daisyComsManager.cpp
 CMakeFiles/rpi-ds-gui.dir/daisyComsManager.cpp.o: CMakeFiles/rpi-ds-gui.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/bensmieja/D/side-projects/daisy-seed/rpi-daisy-seed/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/rpi-ds-gui.dir/daisyComsManager.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/rpi-ds-gui.dir/daisyComsManager.cpp.o -MF CMakeFiles/rpi-ds-gui.dir/daisyComsManager.cpp.o.d -o CMakeFiles/rpi-ds-gui.dir/daisyComsManager.cpp.o -c /home/bensmieja/D/side-projects/daisy-seed/rpi-daisy-seed/daisyComsManager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/bensmieja/D/side-projects/daisy-pi-pedal/rpi-controller/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/rpi-ds-gui.dir/daisyComsManager.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/rpi-ds-gui.dir/daisyComsManager.cpp.o -MF CMakeFiles/rpi-ds-gui.dir/daisyComsManager.cpp.o.d -o CMakeFiles/rpi-ds-gui.dir/daisyComsManager.cpp.o -c /home/bensmieja/D/side-projects/daisy-pi-pedal/rpi-controller/daisyComsManager.cpp
 
 CMakeFiles/rpi-ds-gui.dir/daisyComsManager.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/rpi-ds-gui.dir/daisyComsManager.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bensmieja/D/side-projects/daisy-seed/rpi-daisy-seed/daisyComsManager.cpp > CMakeFiles/rpi-ds-gui.dir/daisyComsManager.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bensmieja/D/side-projects/daisy-pi-pedal/rpi-controller/daisyComsManager.cpp > CMakeFiles/rpi-ds-gui.dir/daisyComsManager.cpp.i
 
 CMakeFiles/rpi-ds-gui.dir/daisyComsManager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/rpi-ds-gui.dir/daisyComsManager.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bensmieja/D/side-projects/daisy-seed/rpi-daisy-seed/daisyComsManager.cpp -o CMakeFiles/rpi-ds-gui.dir/daisyComsManager.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bensmieja/D/side-projects/daisy-pi-pedal/rpi-controller/daisyComsManager.cpp -o CMakeFiles/rpi-ds-gui.dir/daisyComsManager.cpp.s
 
 # Object files for target rpi-ds-gui
 rpi__ds__gui_OBJECTS = \
@@ -137,7 +137,7 @@ rpi-ds-gui: /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.4.2
 rpi-ds-gui: /usr/lib/x86_64-linux-gnu/libGLX.so
 rpi-ds-gui: /usr/lib/x86_64-linux-gnu/libOpenGL.so
 rpi-ds-gui: CMakeFiles/rpi-ds-gui.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/bensmieja/D/side-projects/daisy-seed/rpi-daisy-seed/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable rpi-ds-gui"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/bensmieja/D/side-projects/daisy-pi-pedal/rpi-controller/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable rpi-ds-gui"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/rpi-ds-gui.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -149,6 +149,6 @@ CMakeFiles/rpi-ds-gui.dir/clean:
 .PHONY : CMakeFiles/rpi-ds-gui.dir/clean
 
 CMakeFiles/rpi-ds-gui.dir/depend: rpi-ds-gui_autogen/timestamp
-	cd /home/bensmieja/D/side-projects/daisy-seed/rpi-daisy-seed/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bensmieja/D/side-projects/daisy-seed/rpi-daisy-seed /home/bensmieja/D/side-projects/daisy-seed/rpi-daisy-seed /home/bensmieja/D/side-projects/daisy-seed/rpi-daisy-seed/build /home/bensmieja/D/side-projects/daisy-seed/rpi-daisy-seed/build /home/bensmieja/D/side-projects/daisy-seed/rpi-daisy-seed/build/CMakeFiles/rpi-ds-gui.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/bensmieja/D/side-projects/daisy-pi-pedal/rpi-controller/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bensmieja/D/side-projects/daisy-pi-pedal/rpi-controller /home/bensmieja/D/side-projects/daisy-pi-pedal/rpi-controller /home/bensmieja/D/side-projects/daisy-pi-pedal/rpi-controller/build /home/bensmieja/D/side-projects/daisy-pi-pedal/rpi-controller/build /home/bensmieja/D/side-projects/daisy-pi-pedal/rpi-controller/build/CMakeFiles/rpi-ds-gui.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/rpi-ds-gui.dir/depend
 

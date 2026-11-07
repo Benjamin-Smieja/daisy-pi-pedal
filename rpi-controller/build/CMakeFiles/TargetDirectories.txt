@@ -1,5 +1,5 @@
-/home/bensmieja/D/side-projects/daisy-seed/rpi-daisy-seed/build/CMakeFiles/rpi-ds-gui.dir
-/home/bensmieja/D/side-projects/daisy-seed/rpi-daisy-seed/build/CMakeFiles/edit_cache.dir
-/home/bensmieja/D/side-projects/daisy-seed/rpi-daisy-seed/build/CMakeFiles/rebuild_cache.dir
-/home/bensmieja/D/side-projects/daisy-seed/rpi-daisy-seed/build/CMakeFiles/rpi-ds-gui_autogen_timestamp_deps.dir
-/home/bensmieja/D/side-projects/daisy-seed/rpi-daisy-seed/build/CMakeFiles/rpi-ds-gui_autogen.dir
+/home/bensmieja/D/side-projects/daisy-pi-pedal/rpi-controller/build/CMakeFiles/rpi-ds-gui.dir
+/home/bensmieja/D/side-projects/daisy-pi-pedal/rpi-controller/build/CMakeFiles/edit_cache.dir
+/home/bensmieja/D/side-projects/daisy-pi-pedal/rpi-controller/build/CMakeFiles/rebuild_cache.dir
+/home/bensmieja/D/side-projects/daisy-pi-pedal/rpi-controller/build/CMakeFiles/rpi-ds-gui_autogen_timestamp_deps.dir
+/home/bensmieja/D/side-projects/daisy-pi-pedal/rpi-controller/build/CMakeFiles/rpi-ds-gui_autogen.dir

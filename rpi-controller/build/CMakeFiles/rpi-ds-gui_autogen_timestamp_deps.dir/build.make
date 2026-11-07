@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/bensmieja/D/side-projects/daisy-seed/rpi-daisy-seed
+CMAKE_SOURCE_DIR = /home/bensmieja/D/side-projects/daisy-pi-pedal/rpi-controller
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/bensmieja/D/side-projects/daisy-seed/rpi-daisy-seed/build
+CMAKE_BINARY_DIR = /home/bensmieja/D/side-projects/daisy-pi-pedal/rpi-controller/build
 
 # Utility rule file for rpi-ds-gui_autogen_timestamp_deps.
 
@@ -66,9 +66,9 @@ include CMakeFiles/rpi-ds-gui_autogen_timestamp_deps.dir/compiler_depend.make
 # Include the progress variables for this target.
 include CMakeFiles/rpi-ds-gui_autogen_timestamp_deps.dir/progress.make
 
-CMakeFiles/rpi-ds-gui_autogen_timestamp_deps: /usr/lib/qt6/libexec/uic
 CMakeFiles/rpi-ds-gui_autogen_timestamp_deps: /usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6.4.2
 CMakeFiles/rpi-ds-gui_autogen_timestamp_deps: /usr/lib/qt6/libexec/moc
+CMakeFiles/rpi-ds-gui_autogen_timestamp_deps: /usr/lib/qt6/libexec/uic
 
 rpi-ds-gui_autogen_timestamp_deps: CMakeFiles/rpi-ds-gui_autogen_timestamp_deps
 rpi-ds-gui_autogen_timestamp_deps: CMakeFiles/rpi-ds-gui_autogen_timestamp_deps.dir/build.make
@@ -83,6 +83,6 @@ CMakeFiles/rpi-ds-gui_autogen_timestamp_deps.dir/clean:
 .PHONY : CMakeFiles/rpi-ds-gui_autogen_timestamp_deps.dir/clean
 
 CMakeFiles/rpi-ds-gui_autogen_timestamp_deps.dir/depend:
-	cd /home/bensmieja/D/side-projects/daisy-seed/rpi-daisy-seed/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bensmieja/D/side-projects/daisy-seed/rpi-daisy-seed /home/bensmieja/D/side-projects/daisy-seed/rpi-daisy-seed /home/bensmieja/D/side-projects/daisy-seed/rpi-daisy-seed/build /home/bensmieja/D/side-projects/daisy-seed/rpi-daisy-seed/build /home/bensmieja/D/side-projects/daisy-seed/rpi-daisy-seed/build/CMakeFiles/rpi-ds-gui_autogen_timestamp_deps.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/bensmieja/D/side-projects/daisy-pi-pedal/rpi-controller/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bensmieja/D/side-projects/daisy-pi-pedal/rpi-controller /home/bensmieja/D/side-projects/daisy-pi-pedal/rpi-controller /home/bensmieja/D/side-projects/daisy-pi-pedal/rpi-controller/build /home/bensmieja/D/side-projects/daisy-pi-pedal/rpi-controller/build /home/bensmieja/D/side-projects/daisy-pi-pedal/rpi-controller/build/CMakeFiles/rpi-ds-gui_autogen_timestamp_deps.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/rpi-ds-gui_autogen_timestamp_deps.dir/depend
 

@@ -1,4 +1,5 @@
 #include "trem.h"
+#include "effect.h"
 #include "messages.h"
 #include <cstdint>
 
@@ -18,8 +19,9 @@ void Trem::Init(float sample_rate) {
   }
 }
 
-void Trem::SetParam(uint8_t param_id, float val) {
-  switch (param_id) {
+void Trem::SetParam(uint8_t param_idx, float val) {
+  kParams_[param_idx].setClampedVal(val,param_vals_[param_idx]);
+  switch (param_idx) {
     case Trem::kFreq:
       trem_.SetFreq(param_vals_[Trem::kFreq]);
       break;
@@ -33,6 +35,10 @@ void Trem::SetParam(uint8_t param_id, float val) {
     //Did not match one of the Param_Ids....
     break;
   }
+}
+
+EffectParamDescriptor Trem::GetParamDesc(uint8_t param_idx){
+  return kParams_[param_idx];
 }
 
 void Trem::ProcessBlock(daisy::AudioHandle::InputBuffer in,

@@ -1,16 +1,16 @@
 {
-	"BUILD_DIR" : "/home/bensmieja/D/side-projects/daisy-seed/rpi-daisy-seed/build/rpi-ds-gui_autogen",
-	"CMAKE_BINARY_DIR" : "/home/bensmieja/D/side-projects/daisy-seed/rpi-daisy-seed/build",
-	"CMAKE_CURRENT_BINARY_DIR" : "/home/bensmieja/D/side-projects/daisy-seed/rpi-daisy-seed/build",
-	"CMAKE_CURRENT_SOURCE_DIR" : "/home/bensmieja/D/side-projects/daisy-seed/rpi-daisy-seed",
+	"BUILD_DIR" : "/home/bensmieja/D/side-projects/daisy-pi-pedal/rpi-controller/build/rpi-ds-gui_autogen",
+	"CMAKE_BINARY_DIR" : "/home/bensmieja/D/side-projects/daisy-pi-pedal/rpi-controller/build",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/bensmieja/D/side-projects/daisy-pi-pedal/rpi-controller/build",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/bensmieja/D/side-projects/daisy-pi-pedal/rpi-controller",
 	"CMAKE_EXECUTABLE" : "/usr/bin/cmake",
 	"CMAKE_LIST_FILES" : 
 	[
-		"/home/bensmieja/D/side-projects/daisy-seed/rpi-daisy-seed/CMakeLists.txt",
-		"/home/bensmieja/D/side-projects/daisy-seed/rpi-daisy-seed/build/CMakeFiles/3.28.3/CMakeSystem.cmake",
+		"/home/bensmieja/D/side-projects/daisy-pi-pedal/rpi-controller/CMakeLists.txt",
+		"/home/bensmieja/D/side-projects/daisy-pi-pedal/rpi-controller/build/CMakeFiles/3.28.3/CMakeSystem.cmake",
 		"/usr/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake",
 		"/usr/share/cmake-3.28/Modules/Platform/Linux-Initialize.cmake",
-		"/home/bensmieja/D/side-projects/daisy-seed/rpi-daisy-seed/build/CMakeFiles/3.28.3/CMakeCXXCompiler.cmake",
+		"/home/bensmieja/D/side-projects/daisy-pi-pedal/rpi-controller/build/CMakeFiles/3.28.3/CMakeCXXCompiler.cmake",
 		"/usr/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake",
 		"/usr/share/cmake-3.28/Modules/CMakeGenericSystem.cmake",
 		"/usr/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake",
@@ -18,12 +18,9 @@
 		"/usr/share/cmake-3.28/Modules/Platform/UnixPaths.cmake",
 		"/usr/share/cmake-3.28/Modules/CMakeCXXInformation.cmake",
 		"/usr/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake",
-		"/usr/share/cmake-3.28/Modules/Compiler/Clang-CXX.cmake",
-		"/usr/share/cmake-3.28/Modules/Compiler/Clang.cmake",
-		"/usr/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake",
+		"/usr/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake",
 		"/usr/share/cmake-3.28/Modules/Compiler/GNU.cmake",
 		"/usr/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake",
-		"/usr/share/cmake-3.28/Modules/Platform/Linux-Clang-CXX.cmake",
 		"/usr/share/cmake-3.28/Modules/Platform/Linux-GNU-CXX.cmake",
 		"/usr/share/cmake-3.28/Modules/Platform/Linux-GNU.cmake",
 		"/usr/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake",
@@ -179,21 +176,21 @@
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt6Widgets/Qt6WidgetsVersionlessTargets.cmake",
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt6Widgets/Qt6WidgetsMacros.cmake"
 	],
-	"CMAKE_SOURCE_DIR" : "/home/bensmieja/D/side-projects/daisy-seed/rpi-daisy-seed",
-	"DEP_FILE" : "/home/bensmieja/D/side-projects/daisy-seed/rpi-daisy-seed/build/rpi-ds-gui_autogen/deps",
+	"CMAKE_SOURCE_DIR" : "/home/bensmieja/D/side-projects/daisy-pi-pedal/rpi-controller",
+	"DEP_FILE" : "/home/bensmieja/D/side-projects/daisy-pi-pedal/rpi-controller/build/rpi-ds-gui_autogen/deps",
 	"DEP_FILE_RULE_NAME" : "rpi-ds-gui_autogen/timestamp",
 	"HEADERS" : 
 	[
 		[
-			"/home/bensmieja/D/side-projects/daisy-seed/rpi-daisy-seed/daisyComsManager.h",
+			"/home/bensmieja/D/side-projects/daisy-pi-pedal/rpi-controller/daisyComsManager.h",
 			"MU",
 			"EWIEGA46WW/moc_daisyComsManager.cpp",
 			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
-	"INCLUDE_DIR" : "/home/bensmieja/D/side-projects/daisy-seed/rpi-daisy-seed/build/rpi-ds-gui_autogen/include",
-	"MOC_COMPILATION_FILE" : "/home/bensmieja/D/side-projects/daisy-seed/rpi-daisy-seed/build/rpi-ds-gui_autogen/mocs_compilation.cpp",
+	"INCLUDE_DIR" : "/home/bensmieja/D/side-projects/daisy-pi-pedal/rpi-controller/build/rpi-ds-gui_autogen/include",
+	"MOC_COMPILATION_FILE" : "/home/bensmieja/D/side-projects/daisy-pi-pedal/rpi-controller/build/rpi-ds-gui_autogen/mocs_compilation.cpp",
 	"MOC_DEFINITIONS" : [ "QT_CORE_LIB", "QT_GUI_LIB", "QT_NO_DEBUG", "QT_WIDGETS_LIB" ],
 	"MOC_DEPEND_FILTERS" : 
 	[
@@ -204,16 +201,17 @@
 	],
 	"MOC_INCLUDES" : 
 	[
+		"/home/bensmieja/D/side-projects/daisy-pi-pedal/protocol",
 		"/usr/include/x86_64-linux-gnu/qt6/QtWidgets",
 		"/usr/include/x86_64-linux-gnu/qt6",
 		"/usr/include/x86_64-linux-gnu/qt6/QtCore",
 		"/usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++",
 		"/usr/include/x86_64-linux-gnu/qt6/QtGui",
 		"/usr/include",
-		"/usr/include/c++/14",
-		"/usr/include/x86_64-linux-gnu/c++/14",
-		"/usr/include/c++/14/backward",
-		"/usr/lib/llvm-18/lib/clang/18/include",
+		"/usr/include/c++/13",
+		"/usr/include/x86_64-linux-gnu/c++/13",
+		"/usr/include/c++/13/backward",
+		"/usr/lib/gcc/x86_64-linux-gnu/13/include",
 		"/usr/local/include",
 		"/usr/include/x86_64-linux-gnu"
 	],
@@ -229,33 +227,33 @@
 	"MOC_PATH_PREFIX" : false,
 	"MOC_PREDEFS_CMD" : 
 	[
-		"/usr/bin/clang++",
+		"/usr/bin/c++",
 		"-std=gnu++17",
 		"-dM",
 		"-E",
 		"-c",
 		"/usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp"
 	],
-	"MOC_PREDEFS_FILE" : "/home/bensmieja/D/side-projects/daisy-seed/rpi-daisy-seed/build/rpi-ds-gui_autogen/moc_predefs.h",
+	"MOC_PREDEFS_FILE" : "/home/bensmieja/D/side-projects/daisy-pi-pedal/rpi-controller/build/rpi-ds-gui_autogen/moc_predefs.h",
 	"MOC_RELAXED_MODE" : false,
 	"MOC_SKIP" : [],
 	"MULTI_CONFIG" : false,
 	"PARALLEL" : 12,
-	"PARSE_CACHE_FILE" : "/home/bensmieja/D/side-projects/daisy-seed/rpi-daisy-seed/build/CMakeFiles/rpi-ds-gui_autogen.dir/ParseCache.txt",
+	"PARSE_CACHE_FILE" : "/home/bensmieja/D/side-projects/daisy-pi-pedal/rpi-controller/build/CMakeFiles/rpi-ds-gui_autogen.dir/ParseCache.txt",
 	"QT_MOC_EXECUTABLE" : "/usr/lib/qt6/libexec/moc",
 	"QT_UIC_EXECUTABLE" : "/usr/lib/qt6/libexec/uic",
 	"QT_VERSION_MAJOR" : 6,
 	"QT_VERSION_MINOR" : 4,
-	"SETTINGS_FILE" : "/home/bensmieja/D/side-projects/daisy-seed/rpi-daisy-seed/build/CMakeFiles/rpi-ds-gui_autogen.dir/AutogenUsed.txt",
+	"SETTINGS_FILE" : "/home/bensmieja/D/side-projects/daisy-pi-pedal/rpi-controller/build/CMakeFiles/rpi-ds-gui_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
 		[
-			"/home/bensmieja/D/side-projects/daisy-seed/rpi-daisy-seed/daisyComsManager.cpp",
+			"/home/bensmieja/D/side-projects/daisy-pi-pedal/rpi-controller/daisyComsManager.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/bensmieja/D/side-projects/daisy-seed/rpi-daisy-seed/rpi-ds-gui.cpp",
+			"/home/bensmieja/D/side-projects/daisy-pi-pedal/rpi-controller/rpi-ds-gui.cpp",
 			"MU",
 			null
 		]

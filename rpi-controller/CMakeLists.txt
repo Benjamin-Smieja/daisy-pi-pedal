@@ -19,5 +19,7 @@ rpi-ds-gui.cpp
 daisyComsManager.cpp
 )
 
+target_include_directories(rpi-ds-gui PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/../protocol)
+
 # Link your app against Qt Widgets
 target_link_libraries(rpi-ds-gui PRIVATE Qt6::Widgets)

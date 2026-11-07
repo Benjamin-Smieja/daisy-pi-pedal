@@ -117,6 +117,8 @@ int main(int argc, char *argv[]) {
         statusLabel->setStyleSheet("color: #e57373; font-weight: bold;");
     }
 
+    comsManager.getPedalDescription();
+
     // --- Throttled I2C Transmitter (Prevents GUI Freezing) ---
     uint8_t pendingVal = 0;
     bool isDirty = false;
@@ -127,7 +129,7 @@ int main(int argc, char *argv[]) {
 
         uint8_t effectId = 0x01;
         uint8_t paramId  = 0x00;
-        bool ok = comsManager.sendValueToDaisy(effectId, paramId, pendingVal);
+        bool ok = comsManager.sendSetParamToDaisy(effectId, paramId, pendingVal);
         if (ok) {
             statusLabel->setText(QString("I2C Status: OK (Sent 3 bytes) -> Expected LED: %1")
                 .arg(pendingVal < 33 ? "ON" : (pendingVal < 66 ? "OFF" : "ON")));
